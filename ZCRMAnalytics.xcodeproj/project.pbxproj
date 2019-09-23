@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		F0B8F8942335F66F00B86317 /* ZCRMAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = F0B8F8922335F66F00B86317 /* ZCRMAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0B8F89B2336094100B86317 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8F89A2336094100B86317 /* Extension.swift */; };
+		F3D0D428974B21A05E22C3A1 /* Pods_ZCRMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0972F85109DA83F29538C00E /* Pods_ZCRMAnalytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		078B0A695F870F8C925988A0 /* Pods-ZCRMAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCRMAnalytics.release.xcconfig"; path = "Target Support Files/Pods-ZCRMAnalytics/Pods-ZCRMAnalytics.release.xcconfig"; sourceTree = "<group>"; };
+		0972F85109DA83F29538C00E /* Pods_ZCRMAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZCRMAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B8F88F2335F66E00B86317 /* ZCRMAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCRMAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B8F8922335F66F00B86317 /* ZCRMAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRMAnalytics.h; sourceTree = "<group>"; };
 		F0B8F8932335F66F00B86317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B8F89A2336094100B86317 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F89012B8C608866B97210462 /* Pods-ZCRMAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCRMAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-ZCRMAnalytics/Pods-ZCRMAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D0D428974B21A05E22C3A1 /* Pods_ZCRMAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50408D3567E848CF9DA4E254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0972F85109DA83F29538C00E /* Pods_ZCRMAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2FBD784A6E88D76BAE7A551 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F89012B8C608866B97210462 /* Pods-ZCRMAnalytics.debug.xcconfig */,
+				078B0A695F870F8C925988A0 /* Pods-ZCRMAnalytics.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F0B8F8852335F66E00B86317 = {
 			isa = PBXGroup;
 			children = (
 				F0B8F8912335F66E00B86317 /* ZCRMAnalytics */,
 				F0B8F8902335F66E00B86317 /* Products */,
+				B2FBD784A6E88D76BAE7A551 /* Pods */,
+				50408D3567E848CF9DA4E254 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +75,7 @@
 			children = (
 				F0B8F8922335F66F00B86317 /* ZCRMAnalytics.h */,
 				F0B8F8932335F66F00B86317 /* Info.plist */,
+				F0B8F89A2336094100B86317 /* Extension.swift */,
 			);
 			path = ZCRMAnalytics;
 			sourceTree = "<group>";
@@ -70,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0B8F8972335F66F00B86317 /* Build configuration list for PBXNativeTarget "ZCRMAnalytics" */;
 			buildPhases = (
+				885721A4476679EFA8C53B75 /* [CP] Check Pods Manifest.lock */,
 				F0B8F88A2335F66E00B86317 /* Headers */,
 				F0B8F88B2335F66E00B86317 /* Sources */,
 				F0B8F88C2335F66E00B86317 /* Frameworks */,
@@ -95,6 +124,7 @@
 				TargetAttributes = {
 					F0B8F88E2335F66E00B86317 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -126,11 +156,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		885721A4476679EFA8C53B75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZCRMAnalytics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0B8F88B2335F66E00B86317 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B8F89B2336094100B86317 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +315,9 @@
 		};
 		F0B8F8982335F66F00B86317 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89012B8C608866B97210462 /* Pods-ZCRMAnalytics.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MMB2V2S8HY;
@@ -277,6 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,7 +343,9 @@
 		};
 		F0B8F8992335F66F00B86317 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 078B0A695F870F8C925988A0 /* Pods-ZCRMAnalytics.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MMB2V2S8HY;

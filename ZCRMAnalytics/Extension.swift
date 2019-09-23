@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import Nuke
 
-extension UIEdgeInsets {
-    static var zero: UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
+func runTestFunction() {
+    let imageView = UIImageView()
+    Nuke.loadImage(with: URL(string: "https://unsplash.com/photos/GvhSUEN-Lm8")!, into: imageView)
 }
-
